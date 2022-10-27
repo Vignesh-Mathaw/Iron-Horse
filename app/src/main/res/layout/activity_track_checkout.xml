@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F6F8"
+    android:focusableInTouchMode="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimary"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" >
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:text="Payment"
+            android:layout_weight="1"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/processLyt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/toolbar"
+        android:background="#F5F6F8"
+        android:gravity="top|center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginTop="26dp">
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/confirmLyt"
+        android:layout_below="@+id/processLyt"
+        android:layout_margin="@dimen/margin_5dp"
+        android:background="#EAECF1"
+        android:fadeScrollbars="true"
+        android:paddingBottom="@dimen/dimen_20dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/paymentLyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:id="@+id/lytPayOption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_10dp">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/margin_10dp"
+                            android:layout_marginBottom="@dimen/margin_10dp"
+                            style="@style/fontfamily_mediun"
+                            android:text="@string/payment_mathod"
+                            android:layout_marginStart="5dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/margin_5dp"
+                            android:visibility="gone"
+                            android:weightSum="4">
+
+
+                            <RadioButton
+                                android:id="@+id/rbcod"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.4"
+                                android:tag="@string/codpaytype"
+                                android:textSize="@dimen/mid_text"
+                                android:layout_marginLeft="5dp"
+                                app:buttonTint="@color/black"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="2.4"
+                                android:text="@string/cod_pay"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/dimen_14sp" />
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="32dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:src="@drawable/cod" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lytPayU"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1.5dp"
+                                android:background="@color/bg_color" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/margin_5dp"
+                                android:weightSum="4">
+
+                                <RadioButton
+                                    android:id="@+id/rbPayU"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.4"
+                                    android:tag="@string/pay_u"
+                                    android:textSize="@dimen/mid_text"
+                                    android:layout_marginLeft="5dp"
+                                    app:buttonTint="@color/black" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="2.4"
+                                    android:text="@string/pay_u_pay"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/dimen_14sp" />
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/payu" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lytRazorPay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1.5dp"
+                                android:background="@color/bg_color" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/margin_5dp"
+                                android:weightSum="4">
+
+                                <RadioButton
+                                    android:id="@+id/rbRazorPay"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.4"
+                                    android:tag="@string/razor_pay"
+                                    android:textSize="@dimen/mid_text"
+                                    app:buttonTint="@color/black"
+                                    android:layout_marginLeft="5dp"/>
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="2.4"
+                                    android:text="@string/razor_payment"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/dimen_14sp" />
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/razorpay" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lytUpi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1.5dp"
+                                android:background="@color/bg_color" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/margin_5dp"
+                                android:weightSum="4">
+
+                                <RadioButton
+                                    android:id="@+id/rbUpi"
+                                    android:layout_width="35dp"
+                                    android:layout_height="wrap_content"
+                                    android:tag="UPI"
+                                    android:textSize="@dimen/mid_text"
+                                    app:buttonTint="@color/black"
+                                    android:layout_marginLeft="5dp"/>
+
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="UPI"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/dimen_14sp"  />
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/upi" />
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/icon_gpay" />
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/icon_phonepe" />
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/icon_paytm" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/lytPayPal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1.5dp"
+                                android:background="@color/bg_color" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/margin_5dp"
+                                android:weightSum="4">
+
+                                <RadioButton
+                                    android:id="@+id/rbPayPal"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.4"
+                                    android:padding="@dimen/margin_10dp"
+                                    android:textSize="@dimen/mid_text"
+                                    app:buttonTint="@color/black" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="2.4"
+                                    android:text="@string/paypal_pay"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/dimen_14sp"  />
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/paypal" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/confirmLyt"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:background="#F5F6F8"
+        android:minHeight="?attr/actionBarSize"
+        android:paddingStart="@dimen/margin_10dp"
+        android:paddingEnd="@dimen/margin_10dp">
+
+        <TextView
+            android:id="@+id/tvPreTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawablePadding="@dimen/margin_5dp"
+            style="@style/fontfamily_mediun"
+            android:text="@string/total"
+            android:textSize="17dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvSubTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/tvPreTotal"
+            android:textSize="17dp"
+            style="@style/fontfamily_number_medium"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvConfirmOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/confirm_bg"
+            android:drawableRight="@drawable/next_icon"
+            android:drawablePadding="@dimen/margin_10dp"
+            android:gravity="center"
+            android:onClick="OnBtnClick"
+            android:paddingStart="@dimen/dimen_15dp"
+            android:paddingTop="7dp"
+            android:paddingEnd="@dimen/dimen_15dp"
+            android:paddingBottom="7dp"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            style="@style/fontfamily_mediun"
+            android:textSize="16dp"/>
+
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/prgLoading"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

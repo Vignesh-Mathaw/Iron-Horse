@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:id="@+id/lytMain"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txttitle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/poppins_seminbold"
+        android:gravity="center"
+        android:paddingLeft="12dp"
+        android:paddingTop="10dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="10dp"
+        android:text="Category"
+        android:textAlignment="center"
+        android:textColor="#737474"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/txtback"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/select_subcat"/>
+
+</LinearLayout>

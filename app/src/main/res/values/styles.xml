@@ -1,0 +1,90 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowDisablePreview">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionMenuTextColor">@color/white</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="listPreferredItemHeightSmall">42dp</item>
+        <item name="android:textColor">#515C6F</item>
+        <item name="android:autoCompleteTextViewStyle">@style/AppAutoTextCompleteStyle</item>
+    </style>
+
+    <style name="bottomNavView.InActive" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="bottomNavView.Active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textSize">15sp</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="AppAutoTextCompleteStyle" parent="Base.V7.Widget.AppCompat.AutoCompleteTextView">
+        <item name="android:textSize">@dimen/dimen_14sp</item>
+    </style>
+
+    <style name="TabLayoutStyle" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="check_theme" parent="AppTheme">
+        <item name="android:textColorSecondary">@color/light_gray</item>
+
+    </style>
+
+    <style name="check_theme_2" parent="AppTheme">
+        <item name="android:textColorSecondary">@color/black</item>
+
+    </style>
+
+    <style name="radio_black" parent="AppTheme">
+        <item name="android:colorAccent">@color/black</item>
+    </style>
+
+    <style name="ActionBar.titleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="drawerTextStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/dimen_14sp</item>
+    </style>
+
+    <style name="Spinner" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="fontfamily_mediun" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="fontfamily_number" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+
+    <style name="fontfamily_number_medium" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+
+</resources>
+
+    <!--<item name="android:fontFamily">@font/open_sans</item>!-->

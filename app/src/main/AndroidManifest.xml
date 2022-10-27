@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.spiderindia.ironhorse">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.RECEIVE_SMS"
+        tools:node="remove" />
+    <uses-permission
+        android:name="android.permission.READ_SMS"
+        tools:node="remove" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name="com.spiderindia.ironhorse.helper.AppController"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:exported="false"
+        tools:replace="android:usesCleartextTraffic,android:allowBackup">
+        <activity
+            android:name="com.spiderindia.ironhorse.activity.ProfileUpdateSuccessActivity"
+            android:exported="false" />
+        <activity android:name="com.spiderindia.ironhorse.activity.NotificationList"  android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.DrawerActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.WebViewActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.MapActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.MapsActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.OrderListActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.TrackerDetailActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.OrderPlacedActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.CheckoutActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.FullScreenViewActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.ScanActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.scan.SimpleScannerActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.AddressShowActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.AddressAddActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.TrackCheckoutActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.ProductDetailActivity" android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.spiderindia.ironhorse.activity.SplashActivity" />
+        </activity>
+        <activity
+            android:name="com.spiderindia.ironhorse.activity.SearchActivity"
+            android:launchMode="singleTop" android:exported="true"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.ProfileActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.LoginActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter
+                android:autoVerify="true"
+                tools:targetApi="m">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="ekart.wrteam.in"
+                    android:pathPrefix="/refer"
+                    android:scheme="https" />
+                <data
+                    android:host="ekart.wrteam.in"
+                    android:pathPrefix="/itemdetail"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.instamojo.android.activities.PaymentDetailsActivity" android:exported="false"/>
+        <activity android:name="com.payu.custombrowser.PreLollipopPaymentsActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.MainActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.ReferEarnActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.SubCategoryActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.FavouriteActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.CartActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.ProductListActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.CategoryActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.PayPalWebActivity" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.ProductDetailScan" android:exported="false"/>
+        <activity android:name="com.spiderindia.ironhorse.activity.CatProductListActivity" android:exported="false"/>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <receiver android:name="com.spiderindia.ironhorse.helper.SMSBroadcastReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.spiderindia.ironhorse.helper.MyFirebaseMessagingService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.spiderindia.ironhorse.helper.GPSTracker" android:exported="false"/>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_launcher" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimary" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_api_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <!--android:authorities="${applicationId}.my.package.name.provider"!-->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"
+                tools:replace="android:resource"/>
+        </provider>
+
+    </application>
+
+</manifest>

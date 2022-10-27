@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusableInTouchMode="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        android:visibility="gone"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btnback"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:padding="2dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_nav_back"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Add Address"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/signUpLyt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <EditText
+                            android:id="@+id/edtname"
+                            android:layout_width="match_parent"
+                            android:layout_height="46dp"
+                            android:background="@drawable/edt_bg_border_color"
+                            android:inputType="textPersonName"
+                            android:lines="1"
+                            android:hint="Name"
+                            android:padding="12dp"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/poppins_medium"/>
+
+                        <EditText
+                            android:id="@+id/edtmobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="46dp"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/edt_bg_border_color"
+                            android:inputType="phone"
+                            android:hint="Phone Number"
+                            android:padding="12dp"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/poppins_medium" />
+
+                        <EditText
+                            android:id="@+id/edtFlatorHouseNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="46dp"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/edt_bg_border_color"
+                            android:inputType="text"
+                            android:hint="Flat or House No"
+                            android:padding="12dp"
+                            android:textSize="13sp"
+                            android:visibility="gone"
+                            android:fontFamily="@font/poppins_medium" />
+
+                        <EditText
+                            android:id="@+id/edtaddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/edt_bg_border_color"
+                            android:inputType="text"
+                            android:gravity="left"
+                            android:hint="Street or Colony"
+                            android:padding="12dp"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/poppins_medium" />
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/cityspinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="46dp"
+                                android:dropDownWidth="match_parent"
+                                android:textSize="@dimen/dimen_18sp"  />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="12dp">
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/areaSpinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="46dp"
+                                android:dropDownWidth="match_parent"
+                                android:textSize="@dimen/dimen_18sp"  />
+
+                        </LinearLayout>
+
+
+
+
+                        <EditText
+                            android:id="@+id/edtPinCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="46dp"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/edt_bg_border_color"
+                            android:hint="Pin Code"
+                            android:inputType="text"
+                            android:maxLength="6"
+                            android:padding="12dp"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/poppins_medium" />
+
+                        <EditText
+                            android:id="@+id/edtLandMArk"
+                            android:layout_width="match_parent"
+                            android:layout_height="46dp"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/edt_bg_border_color"
+                            android:inputType="text"
+                            android:hint="Landmark(Optional)"
+                            android:padding="12dp"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/poppins_medium" />
+
+                        <TextView
+                            android:id="@+id/tvCurrent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:padding="2dp"
+                            android:textSize="@dimen/dimen_14sp"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/dimen_20dp"
+                            android:background="@drawable/bg_border_gray"
+                            android:orientation="vertical" >
+
+                            <fragment
+                                android:id="@+id/map"
+                                class="com.google.android.gms.maps.SupportMapFragment"
+                                android:layout_width="match_parent"
+                                android:layout_height="140dp"
+                                android:layout_marginStart="@dimen/dimen_1dp"
+                                android:layout_marginTop="@dimen/dimen_1dp"
+                                android:layout_marginEnd="@dimen/dimen_1dp"
+                                android:layout_marginBottom="@dimen/dimen_1dp" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvUpdate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dimen_20dp"
+                            android:background="@drawable/bg_btn_curved"
+                            android:paddingStart="15dp"
+                            android:paddingTop="@dimen/dimen_10dp"
+                            android:paddingEnd="15dp"
+                            android:paddingBottom="@dimen/dimen_10dp"
+                            android:text="Choose Location"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dimen_14sp"
+                            style="@style/fontfamily_mediun"/>
+
+                        <Button
+                            android:id="@+id/btnsubmit"
+                            style="@style/fontfamily_mediun"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_50dp"
+                            android:layout_marginTop="@dimen/dimen_20dp"
+                            android:background="@drawable/bg_button"
+                            android:text="Save Address &amp; Continue"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dimen_16sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+

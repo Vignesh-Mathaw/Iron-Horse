@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingStart="3dp"
+        android:layout_marginRight="30dp"
+        android:paddingEnd="3dp">
+
+        <TextView
+            android:id="@+id/txttitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:text="@string/more_variant"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtmeasurement"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/txttitle"
+            android:layout_toStartOf="@+id/txtprice"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txtprice"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/txttitle"
+            android:layout_alignParentEnd="true"
+            android:gravity="end|center_vertical"
+            android:padding="5dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto_medium"/>
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"
+        android:background="#DDDDDD"></TextView>
+
+
+</LinearLayout>

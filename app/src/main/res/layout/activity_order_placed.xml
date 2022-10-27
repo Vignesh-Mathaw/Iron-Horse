@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusableInTouchMode="true">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimary"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" >
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/fontfamily_mediun"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:text="@string/orderplaced"
+            android:layout_weight="1"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10dp"
+            style="@style/fontfamily_mediun"
+            android:text="@string/order_placed1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:alpha="0.5"
+            android:gravity="center"
+            android:text="@string/success_order"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_14sp" />
+
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:src="@drawable/gift2" />
+
+        <Button
+            android:id="@+id/btnshopping"
+            style="@style/fontfamily_mediun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_45dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_marginRight="@dimen/dimen_45dp"
+            android:layout_marginBottom="@dimen/dimen_20dp"
+            android:background="@drawable/bg_btn_curved"
+            android:onClick="OnBtnClick"
+            android:text="@string/continue_shopping"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_16sp" />
+
+        <TextView
+            android:id="@+id/txtsummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="none"
+            style="@style/fontfamily_mediun"
+            android:onClick="OnBtnClick"
+            android:padding="5dp"
+            android:text="@string/summary"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/dimen_16sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:text="Powered By">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/spiderlogo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/spiderlogo" />
+
+    </LinearLayout>
+
+</RelativeLayout>

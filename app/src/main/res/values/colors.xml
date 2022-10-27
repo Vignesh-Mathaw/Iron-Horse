@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff6969</color>
+    <color name="colorPrimaryDark">#FD5757</color>
+    <color name="colorAccent">#ff6969</color>
+
+
+    <color name="select_subcat">#ff6969</color>
+    <color name="red">#ff6969</color>
+    <color name="colorbackgroundlabel">#44515c6f</color>
+
+<!--    <color name="colorPrimary">#ff6969</color>-->
+<!--    <color name="colorPrimaryDark">#FD5757</color>-->
+<!--    <color name="colorAccent">#ff6969</color>  -->
+<!--    <color name="select_subcat">#FF696A</color>-->
+<!--    <color name="red">#eb4f3f</color>-->
+
+
+
+    <color name="colorAccent2">#515c6f</color>
+    <color name="transGray">#44515c6f</color>
+    <color name="label_color">#929292</color>
+    <color name="label">#7E7D7D</color>
+    <color name="black">#000000</color>
+    <color name="black_70">#70000000</color>
+    <color name="white">#ffffff</color>
+    <color name="darkyellow">#0470C3</color>
+    <color name="gray">#ACABAB</color>
+    <color name="bggray">#E9E8E8</color>
+    <color name="overlay_white">#656668</color>
+    <color name="txt_color">#191919</color>
+    <color name="trans_white">#99ffffff</color>
+    <color name="green">#1e8f78</color>
+    <color name="bg_color">#ffffff</color>
+    <color name="tracking_gray">#B9B6B6</color>
+    <color name="tracking_black">#313030</color>
+    <color name="edt_bg_color">#100F314A</color>
+    <color name="gray_blue">#5d6079</color>
+    <color name="dark_gray">#313030</color>
+    <color name="light_gray">#dbdada</color>
+    <color name="light_green">#14c167</color>
+    <color name="new_green">#32C982</color>
+    <color name="new_gray_trackorder">#727272</color>
+    <color name="select_cat">#F1F1F1</color>
+
+    <color name="default_cat">#737474</color>
+</resources>

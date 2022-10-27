@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_80dp"
+        android:orientation="horizontal"
+        android:id="@+id/download"
+        android:gravity="center"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_login"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/shareLinearLayout"
+        android:background="?android:attr/selectableItemBackground">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update the App"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_gravity="center_vertical"
+            android:textColor="#2D3E58"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/uploadLinearLaySout"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:background="?android:attr/selectableItemBackground">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Please update your app to the latest version for\n a seamless user experience!"
+            android:layout_gravity="center_vertical"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_marginTop="@dimen/margin_16">
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:id="@+id/btn_update"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_btn"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppins_seminbold"
+            android:text="Update App"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

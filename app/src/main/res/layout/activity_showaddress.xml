@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/btnback"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:padding="2dp"
+                android:src="@drawable/ic_nav_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center_vertical"
+                android:text="Choose Address"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lytNoaddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="top|center"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="146dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="120dp"
+                    android:src="@drawable/ic_no_address" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:text="No Address Found"
+                    android:textColor="#7A828D"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/btnAddAddress"
+                    style="@style/fontfamily_mediun"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/bg_button"
+                    android:text="Add New Address"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/lytList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/dimen_60dp"
+                        android:id="@+id/addressList"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/margin_16"
+                    android:paddingRight="@dimen/margin_16"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnAddNew"
+                        style="@style/fontfamily_mediun"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/border_btn_red"
+                        android:text="Add New"
+                        android:textColor="#FF696A"
+                        android:textSize="14sp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="6dp"/>
+
+                    <Button
+                        android:id="@+id/btnContinue"
+                        style="@style/fontfamily_mediun"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_button"
+                        android:text="Continue"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="6dp"/>
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>
+
